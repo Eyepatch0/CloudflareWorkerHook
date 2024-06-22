@@ -4,7 +4,4 @@ export const GITHUB_CONSTANTS = {
   GITHUB_BRANCH: "dev",
 };
 
-export const USE_SPECFIC = {
-  AUTHOR_EMAIL: "action@github.com",
-  CONDITION: /^(added listing:)/,
-};
+export const FILTER_CONDITION_REGEX = /^(added listing: )/;

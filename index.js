@@ -1,26 +1,31 @@
+import { getValue } from "./utils/value.js";
 import { GITHUB_CONSTANTS } from "./utils/constants.js";
-import updateValidCommit from "./functions/updateValidCommit.js";
+
 import sendUpdate from "./functions/sendUpdate.js";
-import { getCommitData } from "./utils/value.js";
+import formatText from "./utils/helpers/formatText.js";
+import updateValidCommit from "./functions/updateValidCommit.js";
 
 async function main() {
-  const baseURL = `https://api.github.com/repos/${GITHUB_CONSTANTS.GITHUB_REPO_OWNER}/${GITHUB_CONSTANTS.GITHUB_REPO_NAME}/commits`;
-  const headers = {
-    Accept: "application/vnd.github.v3+json",
-  };
-
   try {
-    const checkUpdate = await updateValidCommit(baseURL, headers);
+    const baseURL = `https://api.github.com/repos/${GITHUB_CONSTANTS.GITHUB_REPO_OWNER}/${GITHUB_CONSTANTS.GITHUB_REPO_NAME}/commits`;
+    const headers = {
+      Accept: "application/vnd.github.v3+json",
+    };
 
-    if (checkUpdate) {
-      await sendUpdate(getCommitData().commit.message);
+    const checkForUpdate = await updateValidCommit(baseURL, headers);
+
+    if (checkForUpdate) {
+      const message = formatText(
+        getValue("LAST_VALID_COMMIT_DATA").commit.message
+      );
+
+      await sendUpdate(message);
     }
 
     return;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
 
 main();
-
