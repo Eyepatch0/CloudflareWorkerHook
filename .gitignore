@@ -5,3 +5,9 @@
 # Node Modules
 
 node_modules
+
+# Cloudflare
+
+.dev.vars
+.wrangler
+wrangler.toml
