@@ -1,0 +1,5 @@
+# Discord
+DISCORD_WEBHOOK_URL=your_token
+
+# Github 
+GITHUB_TOKEN=your_token

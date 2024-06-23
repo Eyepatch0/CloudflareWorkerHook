@@ -5,3 +5,5 @@ export const GITHUB_CONSTANTS = {
 };
 
 export const FILTER_CONDITION_REGEX = /^(added listing: )/;
+
+export const KV_COMMITS_KEY = "data";

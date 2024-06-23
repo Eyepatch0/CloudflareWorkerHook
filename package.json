@@ -1,19 +1,19 @@
 {
   "name": "github_updates",
   "version": "1.0.0",
-  "description": "",
+  "description": "Cloudlfare Worker which monitors a public GitHub repository and pushes updates on Discord.",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npx only-allow pnpm"
   },
-  "keywords": [],
+  "keywords": [
+    "Cloudflare Worker",
+    "Cloudflare",
+    "GitHub",
+    "Discord"
+  ],
   "author": "Syed Mohammed",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^1.7.2",
-    "dotenv": "^16.4.5",
-    "node-schedule": "^2.1.1"
-  }
+  "license": "ISC"
 }
