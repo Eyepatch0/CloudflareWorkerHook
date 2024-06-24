@@ -35,7 +35,7 @@ async function handleScheduled(event, env) {
 
     if (
       getPreviousCommitsData.length &&
-      getCommitsData.at(-1).sha !== getPreviousCommitsData.at(-1).sha
+      getCommitsData[0].sha !== getPreviousCommitsData[0].sha
     ) {
       const newData = findNewData(getPreviousCommitsData, getCommitsData);
 

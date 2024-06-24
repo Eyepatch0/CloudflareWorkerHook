@@ -4,6 +4,6 @@ export const GITHUB_CONSTANTS = {
   GITHUB_BRANCH: "dev",
 };
 
-export const FILTER_CONDITION_REGEX = /^(added listing: )/;
+export const FILTER_CONDITION_REGEX = /^(added listing: )\s*/;
 
 export const KV_COMMITS_KEY = "data";
