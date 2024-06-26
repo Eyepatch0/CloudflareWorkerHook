@@ -4,6 +4,10 @@ export const GITHUB_CONSTANTS = {
   GITHUB_BRANCH: "dev",
 };
 
+export const DISCORD_CONSTANTS = {
+  THREAD_ID: "",
+};
+
 export const FILTER_CONDITION_REGEX = /^(added listing: )\s*/;
 
 export const KV_COMMITS_KEY = "data";

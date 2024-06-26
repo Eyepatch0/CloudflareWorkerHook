@@ -1,4 +1,5 @@
 import formatText from "../utils/formatText.js";
+import threadEnabled from "../utils/threadEnabled.js";
 
 async function sendUpdate(message, env) {
   try {
@@ -8,7 +9,9 @@ async function sendUpdate(message, env) {
     const headers = {
       "Content-Type": "application/json",
     };
-    const response = await fetch(env.DISCORD_WEBHOOK_URL, {
+    const url = threadEnabled(env);
+
+    const response = await fetch(url, {
       method: "POST",
       headers: headers,
       body: JSON.stringify(data),

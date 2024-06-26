@@ -153,7 +153,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Roadmap
 
 - [ ] Switch to TypeScript
-- [ ] Add support for posting in Discord Threads
+- [x] Add support for posting in Discord Threads
+- [ ] Update the filter condition to retrieve postings from other sources
 
 See the [open issues](https://github.com/Eyepatch0/CloudflareWorkerHook/issues) for a full list of proposed features (and known issues).
 
@@ -188,7 +189,8 @@ Distributed under the ISC License. See [ISC License](https://opensource.org/lice
 
 ## Contact
 
-Your Name: [@0_eyepatch](https://twitter.com/@0_eyepatch) - syed.mohammed0975@gmail.com
+- Twitter: [@0_eyepatch](https://twitter.com/@0_eyepatch)
+- LinkedIn: [Syed Mohammed](https://www.linkedin.com/in/syed-mohammed0/)
 
 <!-- Project Link: [https://github.com/Eyepatch0/CloudflareWorkerHook](https://github.com/Eyepatch0/CloudflareWorkerHook) -->
 
