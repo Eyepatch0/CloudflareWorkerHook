@@ -1,5 +1,3 @@
-import { GITHUB_CONSTANTS } from "./utils/constants.js";
-
 import {
   getValue,
   updateValue,
@@ -18,7 +16,7 @@ async function handleScheduled(event, env) {
       await createKey(env);
     }
 
-    const baseURL = `https://api.github.com/repos/${GITHUB_CONSTANTS.GITHUB_REPO_OWNER}/${GITHUB_CONSTANTS.GITHUB_REPO_NAME}/commits`;
+    const baseURL = `https://api.github.com/repos/${env.GITHUB_REPO_OWNER}/${env.GITHUB_REPO_NAME}/commits`;
     let headers = {
       Accept: "application/vnd.github.v3+json",
       "User-Agent": "Cloudflare Worker",

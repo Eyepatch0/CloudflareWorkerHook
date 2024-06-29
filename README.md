@@ -112,13 +112,14 @@
 
 2. Configure Environment Variables
 
-   - Rename `.dev.vars.example` to `.dev.vars` and add your tokens.
+   - Add `GITHUB_TOKEN` and `DISCORD_WEBHOOK_URL` from [Cloudflare Dashboard](https://dash.cloudflare.com/).
+   - Rename `.dev.vars.example` to `.dev.vars` and add your secrets for development.
    - Rename `wrangler.toml.example` to `wrangler.toml` and add your details.
 
 3. Create a KV Namespace
 
    ```sh
-    npx wrangler kv:namespace create <YOUR_NAMESPACE>
+    npx wrangler kv:namespace create PERSIST
    ```
 
    and add the namespace details to `wrangler.toml`.
@@ -140,13 +141,19 @@
 
 <!-- USAGE EXAMPLES -->
 
-<!-- ## Usage
+## Features
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+<!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources. -->
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+- Modify `GITHUB_REPO_OWNER` and `GITHUB_REPO_NAME` to monitor a repo of your choice.
+- Cutomize `FILTER_CONDITION_REGEX` for your usecase.
+- Add `THREAD_ID` to post on specific Discord Threads instead of channels.
+- Support for unauthenticated GitHub requests.
+- Modify `crons` in `wrangler.toml` to cuztomize your schedule
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 
@@ -182,7 +189,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the ISC License. See [ISC License](https://opensource.org/licenses/ISC) for more information.
+Distributed under the ISC License. See [LICENSE](https://github.com/Eyepatch0/CloudflareWorkerHook/blob/main/LICENSE.txt) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -219,7 +226,7 @@ Distributed under the ISC License. See [ISC License](https://opensource.org/lice
 [issues-shield]: https://img.shields.io/github/issues/Eyepatch0/CloudflareWorkerHook.svg?style=for-the-badge
 [issues-url]: https://github.com/Eyepatch0/CloudflareWorkerHook/issues
 [license-shield]: https://img.shields.io/github/license/Eyepatch0/CloudflareWorkerHook.svg?style=for-the-badge
-[license-url]: https://opensource.org/licenses/ISC
+[license-url]: https://github.com/Eyepatch0/CloudflareWorkerHook/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/syed-mohammed0
 [product-screenshot]: images/screenshot.png

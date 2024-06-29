@@ -5,8 +5,14 @@ workers_dev = true
 
 main="./index.js"
 
+[vars]
+GITHUB_REPO_NAME=""
+GITHUB_REPO_OWNER=""
+THREAD_ID="" 
+KV_COMMITS_KEY="data"
+
 [[kv_namespaces]]
-binding = ""
+binding = "PERSIST"
 id = ""
 
 [placement]
