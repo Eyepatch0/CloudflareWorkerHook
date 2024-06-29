@@ -19,12 +19,14 @@ async function handleScheduled(event, env) {
     }
 
     const baseURL = `https://api.github.com/repos/${GITHUB_CONSTANTS.GITHUB_REPO_OWNER}/${GITHUB_CONSTANTS.GITHUB_REPO_NAME}/commits`;
-
-    const headers = {
+    let headers = {
       Accept: "application/vnd.github.v3+json",
       "User-Agent": "Cloudflare Worker",
-      Authorization: `Bearer: ${env.GITHUB_TOKEN}`,
     };
+
+    if (env.GITHUB_TOKEN) {
+      headers["Authorization"] = `Bearer: ${env.GITHUB_TOKEN}`;
+    }
 
     const getPreviousCommitsData = await getValue(env);
     const getCommitsData = await getCommits(baseURL, headers);

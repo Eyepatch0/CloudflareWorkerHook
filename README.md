@@ -154,6 +154,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 - [ ] Switch to TypeScript
 - [x] Add support for posting in Discord Threads
+- [x] Add support for usage without `GITHUB_TOKEN`
 - [ ] Update the filter condition to retrieve postings from other sources
 
 See the [open issues](https://github.com/Eyepatch0/CloudflareWorkerHook/issues) for a full list of proposed features (and known issues).
